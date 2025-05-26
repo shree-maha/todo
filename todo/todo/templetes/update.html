@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Task</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 48px;
+            font-weight: bold;
+            color: aqua;
+        }
+
+        .form-control {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .submit {
+            background-color: #30b8c7;
+            border-color: #50b3cc;
+            color: #fff;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .submit:hover {
+            background-color: #1fa6b4;
+            transform: scale(1.05);
+        }
+
+        .center-column {
+            width: 600px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: aqua;
+            border-radius: 5px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+            color: #333;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #000000;
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Update Task</h1>
+        <div class="center-column">
+            <form method="POST" action="">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Update Task">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
